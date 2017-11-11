@@ -1,0 +1,88 @@
+/*二级导航栏设置开始*/
+.switchViewBtn{
+    text-align: center;
+    width:100%;
+    padding: 10px 0 5px;
+    height: 40px;font-size: 13px;
+}
+.switchViewBtn a{
+    width:65px;
+    height:40px;
+    color: black;
+    display: block;     /*把a变成块级元素*/
+    text-align: center;
+    text-decoration:none;
+    color: #1E1E1E;
+}
+.switchViewBtn a img{
+    width: 23px;
+}
+.switchViewBtn a{
+    text-decoration: none;
+    float: right;
+}
+.switchViewBtn a:hover{
+    outline:thin solid #8f949a;
+}
+/*二级导航栏结束*/
+
+
+.content{
+    clear: both;
+    width: 1200px;
+    height: 745px;
+    margin-top: 5px;
+}
+.contentView{
+    width: 1198px;
+    height: 694px;
+    background-color: #dddddd;
+}
+
+.viewGis{
+    padding: 4px;
+    width: 972px;
+    height: 674px;
+    margin: 5px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    float: left;
+}
+.viewSelect{
+    width: 194px;
+    height: 684px;
+    margin: 5px;
+    background-color: #FFFFFF;
+    float: left;
+    position: relative;
+}
+.viewSelect img{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 172px;
+
+}
+.viewSelect select{
+    margin-top: 10px;
+    width: 194px;
+    height: 22px;
+}
+.viewSelectDetail{
+    margin-top: 10px;
+    overflow-y: scroll;
+    width: 194px;
+    height: 618px;
+}
+.viewSelectDetail div{
+    color: #4a4a4a;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.viewSelectDetail div:hover{
+    color: #FFFFFF;
+    background-color: #8f949a;
+}

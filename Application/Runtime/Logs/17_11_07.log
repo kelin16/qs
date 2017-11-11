@@ -1,0 +1,39 @@
+[ 2017-11-07T10:43:19+08:00 ] 127.0.0.1 /index.php/Home/user/
+ERR: 非法操作:index
+
+[ 2017-11-07T10:45:16+08:00 ] 127.0.0.1 /index.php/home/index/login
+ERR: 非法操作:login
+
+[ 2017-11-07T14:24:03+08:00 ] 127.0.0.1 /index.php/Home/User/verifyImg
+ERR: 非法操作:verifyimg
+
+[ 2017-11-07T14:24:09+08:00 ] 127.0.0.1 /index.php/Home/User/verifyImg
+ERR: 非法操作:verifyimg
+
+[ 2017-11-07T14:25:01+08:00 ] 127.0.0.1 /index.php/home/index/login
+ERR: 非法操作:login
+
+[ 2017-11-07T14:25:32+08:00 ] 127.0.0.1 /index.php/home/index/login
+ERR: 非法操作:login
+
+[ 2017-11-07T14:25:36+08:00 ] 127.0.0.1 /index.php/Home/Index/verifyImg
+ERR: 非法操作:verifyimg
+
+[ 2017-11-07T14:26:17+08:00 ] 127.0.0.1 /index.php/Home/Index/verifyImg
+ERR: 非法操作:verifyimg
+
+[ 2017-11-07T14:26:55+08:00 ] 127.0.0.1 /index.php/Home/Index/verifyImg
+ERR: 非法操作:verifyimg
+
+[ 2017-11-07T14:31:58+08:00 ] 127.0.0.1 /index.php/Home/user/regist.html
+ERR: 非法操作:regist
+
+[ 2017-11-07T14:33:20+08:00 ] 127.0.0.1 /index.php/Home/User/regist
+ERR: 非法操作:regist
+
+[ 2017-11-07T14:34:23+08:00 ] 127.0.0.1 /index.php/Home/User/regist
+ERR: 模板不存在:./Application/Home/View/User/regist.html
+
+[ 2017-11-07T14:40:29+08:00 ] 127.0.0.1 /index.php/Home/User/register.html
+ERR: 非法操作:register
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频回放</title>
+    <link rel="icon" type="" href="__PUBLIC__/home/images/video/logo2.png">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/navigation.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/run/playback.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/run/jquery.range.css">
+    <script src="__PUBLIC__/home/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/home/js/jquery.date_input.pack.js"> </script>
+    <script src="__PUBLIC__/home/js/run/playback.js"></script>
+    <style>
+        .selec{
+            background-image: url('__PUBLIC__/home/images/setting/MenuGray.png');
+            background-repeat: no-repeat;
+            text-align:center;
+            line-height:35px;
+            width:150px;
+            font-size:13px;
+            height:35px;
+            float:right;
+            position:absolute;
+            top:75px;
+        }
+        .unselec{
+            background-image: url('__PUBLIC__/home/images/setting/MenuWhite.png');
+            background-repeat: no-repeat;
+            text-align:center;
+            line-height:35px;
+            width:150px;
+            font-size:13px;
+            height:35px;
+            float:right;
+            position:absolute;
+            top:75px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="webpage">
+   <div class="main border">
+    <!--导航条开始-->
+    <div class="navBar shadow">
+        <div class="navLeft">
+            <div>
+                <img src="__PUBLIC__/home/images/run/u142.png" alt="logo" style="width:30px;height:30px;padding-top: 10px;float: left">
+                <div class="title">智慧管廊综合管理平台</div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="__APP__/home/run/index">系统运行</a></li>
+                <li><a href="__APP__/home/Eqpt/index.html">系统设备</a></li>
+                <li><a href="#">档案管理</a></li>
+                <li><a href="#">报警信息</a></li>
+                <li>
+                    <a href="#" >巡查巡检</a>
+                    <ul class="navBar_two">
+                        <li style="clear: both;"><a href="#">安防系统</a></li>
+                        <li style="clear: both;"><a href="#">消防系统</a></li>
+                        <li style="clear: both;"><a href="#">自控系统</a></li>
+                        <li style="clear: both;"><a href="#">配电与照明</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">入廊企业</a> </li>
+                <li><a href="#">人员管理</a> </li>
+                <li><a href="#">应急指挥</a> </li>
+                <li><a href="#">3D漫游</a> </li>
+                <li><a href="#">教育培训</a> </li>
+            </ul>
+        </div>
+
+        <div class="navRight ">
+            <img src="__PUBLIC__/home/images/run/u144.png" alt="" style="margin-left:5px;position: relative">
+            &nbsp;你好！Admin</div>
+        <div class="setting"><a href="__APP__/home/Setting/setting" >
+            <img src="__PUBLIC__/home/images/run/u148.png" alt="" >
+        </a></div>
+    </div>
+    <!--主区-->
+    <div class="content">
+        <!--视图切换按钮-->
+        <div class="switchViewBtn">
+            <a href="__APP__/home/run/playback"><div class="selec"  style="right:-25px;">历史回放</div></a>
+            <a href="__APP__/home/run/video"><div class="unselec" style="right:93px;">视频界面</div></a>
+            <a href="__APP__/home/Eqpt/index.html"><div class="unselec" style="right:211px;">BIM</div></a>
+            <a href="__APP__/home/run/index.html"><div class="unselec" style="right:329px;">GIS</div></a>
+            <!--<a href="__APP__/home/run/playback"><img src="__PUBLIC__/home/images/run/playback2.png" alt="视频"><br>回放</a>-->
+            <!--<a href="__APP__/home/run/video"><img src="__PUBLIC__/home/images/run/video.png" alt="视频"><br>预览</a>-->
+            <!--<a href="__APP__/home/run/View/Eqpt/index.html"><img src="__PUBLIC__/home/images/run/fire.png" alt="防火" style="width: 20px; padding-bottom: 3px;"><br>防火分区</a>-->
+            <!--<a href="__APP__/home/run/map"><img src="__PUBLIC__/home/images/run/gis.png" alt="GIS"><br>GIS</a>-->
+            <!--<a href="__APP__/home/run/run"><img src="__PUBLIC__/home/images/run/view.png" alt="视图"><br>三视图</a>-->
+        </div>
+
+        <!--内容区域-->
+        <div class="xiala"><p>下</br>拉</br>框</p></div>
+        <div class="ditu"><p>地</br></br>图</p></div>
+        <!--右边-->
+        <div class="youbian">
+            <div class="youbian_1"><strong>数据来源</strong></div>
+            <select>
+                <option>本机</option>
+                <option>SD卡</option>
+            </select>
+
+            <!--日历-->
+            <div  class="youbian_1" style="left:-169px;top:68px;"><strong>日期</strong></div>
+            <div class="viewRight ">
+                <input id="timeInput"  style="width:150px;background: #fefefe;border: 1px solid #bbb;font-size: 14px;color: #333;
+                padding: 3px;border-radius: 3px; margin-left:30px;" type="text" class="date_picker" onchange="getPathInputVal(this.value);">
+                <span></span>
+                <div class="viewRightBar" id="viewRightBar"><br>
+
+                    <!--<input id="pathInput" type="text" name="fixfolder" value="">-->
+                    <!--<span>16:28:21-16:33:04</span>-->
+                </div>
+
+                <input class="searchFile" type="file" id="file" onchange="onInputFileChange()" />
+            </div>
+        </div>
+    </div>
+   </div>
+
+       <!--左侧选择监控点-->
+            <!--<div class="viewLeft">-->
+                <!--<input type="text" placeholder="搜索" style="width: 183px;height: 20px"><img src="__PUBLIC__/home/images/map/search.png" alt="search">-->
+                <!--<select name="select" id="select">-->
+                    <!--<option value="ying">迎旭路</option>-->
+                    <!--<option value="yuan">园博园大街</option>-->
+                    <!--<option value="tai">太行大街</option>-->
+                    <!--<option value="xin">新城大街</option>-->
+                    <!--<option value="long">隆兴路</option>-->
+                <!--</select>-->
+                <!--<div class="viewSelectDetail">-->
+                    <!--<div>监控点1</div>-->
+                    <!--<div>监控点2</div>-->
+                    <!--<div>监控点3</div>-->
+                    <!--<div>监控点4</div>-->
+                    <!--<div>监控点5</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--中间回放视频-->
+            <!--<div class="viewCenter border">-->
+               <!--<div class="videoBac">-->
+                   <!--<video id="backVideo" src="__PUBLIC__/3.mp4" style="width: 100%;height: 100%;" controls></video>-->
+               <!--</div>-->
+               <!--<div class="videoBacBar">-->
+                   <!--<div class="vidBacBarCtl1">-->
+                       <!--&lt;!&ndash;<img src="__PUBLIC__/home/images/video/u274.png" alt="">&ndash;&gt;-->
+                       <!--<img id="backPlay" src="__PUBLIC__/home/images/video/u270.png" alt="" onclick='backPlay()'>-->
+                       <!--<img id="backPause" src="__PUBLIC__/home/images/video/u272.png" alt="" onclick='backPause()'>-->
+                       <!--<img id="backFast" src="__PUBLIC__/home/images/video/u257.png" alt="" onclick='backFast()'>-->
+                       <!--<img id="speeds" src="__PUBLIC__/home/images/video/u258.png" alt="" onclick='speeds()'>-->
+
+                   <!--</div>-->
+                   <!--<div class="vidBacBarCtl2">-->
+                       <!--<span id="timeSpan">2017-7-3 9:21:00</span>-->
+                       <!--&lt;!&ndash;<img src="__PUBLIC__/home/images/video/download.png" alt="下载" style="position: relative; left: 10px;" >&ndash;&gt;-->
+                       <!--<img src="__PUBLIC__/home/images/video/camera.png" alt="拍照" style="position: relative; left: 10px;" >-->
+                   <!--</div>-->
+
+                   <!--&lt;!&ndash;<div class="vidBacBarCtl3">&ndash;&gt;-->
+                       <!--&lt;!&ndash;<img src="__PUBLIC__/home/images/video/view.png" alt="四视图">&ndash;&gt;-->
+                       <!--&lt;!&ndash;<img src="__PUBLIC__/home/images/video/fullscreen.png" alt="全屏">&ndash;&gt;-->
+                   <!--&lt;!&ndash;</div>&ndash;&gt;-->
+               <!--</div>-->
+
+           <!--</div>-->
+
+            <!--右侧日历-->
+
+        <!--</div>-->
+    <!--</div>-->
+       <!--&lt;!&ndash;<script src="__PUBLIC__/home/js/run/playback.js"></script>&ndash;&gt;-->
+       <script type="text/javascript">
+           //回放按钮播放暂停的实现
+           var video = document.getElementById('backVideo');
+           console.log(video);
+           function backPlay() {
+               if(video.paused){
+                   video.play();
+                   $('#backPlay').attr('src','__PUBLIC__/home/images/video/u0.png');
+               }else{
+                   video.pause();
+                   $('#backPlay').attr('src','__PUBLIC__/home/images/video/u270.png');
+               }
+           }
+           function backPause() {
+
+//               video.stop();
+               video.src = '';
+           }
+
+           function backFast() {
+               video.currentTime -= 2;
+           }
+           function speeds() {
+               video.currentTime += 2;
+           }
+
+
+
+//           日历
+           document.getElementById('timeSpan');
+           $(function () {
+               $('.date_picker').date_input();
+           })
+       </script>
+
+   <div>
+
+        <!--<video id="audio_id" controls autoplay loop>Your browser can't support HTML5 Audio</video>-->
+   </div>
+
+   <script>
+
+       function onInputFileChange() {
+           var file = document.getElementById('file').files[0];
+           var url = URL.createObjectURL(file);
+           //alert(url);
+           document.getElementById("backVideo").src = url;
+       }
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*二级导航栏设置开始*/
+.switchViewBtn{
+    text-align: center;
+    width:100%;
+    padding: 10px 0 5px;
+    height: 40px;
+    font-size: 13px;
+}
+.switchViewBtn a{
+    width:65px;
+    height:40px;
+    color: black;
+    display: block;     /*把a变成块级元素*/
+    text-align:center;
+    text-decoration:none;
+}
+.switchViewBtn a img{
+    width: 23px;
+}
+
+.switchViewBtn a{
+    text-decoration: none;
+    float: right;
+}
+.switchViewBtn a:hover{
+    outline:thin solid #8f949a;
+}
+/*二级导航栏结束*/
+
+/*内容主体*/
+.content{
+    clear: both;
+    width: 1200px;
+    height: 749px;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
+}
+/*三维模型*/
+.modelDiv{
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+}
+#sceneControlDiv{
+    width: 100%;
+    height: 100%;
+    /*visibility: hidden;*/
+}
+
+/*三维视角标签*/
+.modLab{
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    z-index: 999;
+    background-color: #FFFFFF;
+}
+.modLab a{
+    float: right;
+    margin-right: 10px;
+    position: relative;
+    height: 50px;
+}
+.modLab img{
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: rebeccapurple;
+}
+.modLab a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover,a:visited,a:link,a:active{
+    color: #3a930d;
+    text-decoration: none;
+}
+.modLab iframe{
+    width: 30px;
+    height: 30px;
+    /*background-color: #1E1E1E;*/
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    /*opacity: 0.4;*/
+}
+.modLab iframe body{
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+.modLab #textIfr{
+    width:30px ;
+    height: 18px;
+    background-color: #8f949a;
+    opacity: 0;
+    position: absolute;
+    top: 32px;
+    left: -2px;
+    border: thin #1E1E1E solid;
+}
+
+/*左弹框*/
+.leftDiv{
+    position: absolute;
+    z-index:9999;
+    top: 60px;
+    left: 20px;
+    display: none
+}
+
+/*右搜索弹框*/
+.ritSeaDiv{
+    position: absolute;
+    z-index: 99;
+    top: 60px;
+    right: 20px;
+    display: none;
+}
+
+/*右模型信息展示弹框*/
+.ritMesDiv{
+    position: absolute;
+    z-index: 99;
+    top:60px;
+    right: 20px;
+    display: none;
+
+}
+
+/*底部信息弹框*/
+.botMesDiv{
+    position: absolute;
+    z-index: 100;
+    bottom: 0px;
+    /*left:24%;*/
+    width: 100%;
+    height: 155px;
+    display: none;
+}
+/*底部信息按钮*/
+.botMesBtnDiv{
+    position: absolute;
+    bottom:60px;
+    right:10px;
+
+}
+#shishi{
+    position:relative;
+    color:#ffffff;
+    font-size:12px;
+    display:none;
+    font-weight:bold;
+
+}
+
+.botMesBtnDiv iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.lanbian{
+    background-color:#1cd6ff;
+    width:268px;
+    height:45px;
+    float:top;
+    position:relative;
+}
+.lanbian h4{
+    color:#ffffff;
+    line-height: 45px;
+    margin-left: 10px;
+}
+.lanbian img{
+    margin-top:-33px;
+    margin-right:6px;
+    float:right;
+}
+/*右边*/
+.youbian{
+    width:268px;
+    height:600px;
+    background-color:#ffffff;
+    margin-right:20px;
+    /*margin-top:60px;*/
+    position:relative;
+    /*display:none;*/
+}
+.heibian{
+    background-color:#ffffff;
+    width:268px;
+    height:40px;
+    float:top;
+    position:relative;
+    color: #000000;
+    font-size:14px;
+    text-align:center;
+    line-height:40px;
+}
+
+.neirong{
+    background-color:#d6d3d4;
+    width:268px;
+    height:40px;
+    float:top;
+    position:relative;
+    color: #000000;
+    font-size:14px;
+    line-height:40px;
+}
+.neirong p{
+    margin-left:50px;
+}
+.youbian h3{
+    margin-top:15px;
+    margin-left:15px;
+}
+.youbian h3 select{
+    margin-left:20px;
+    width:120px;
+}
+.youbian h3 input{
+    margin-left:20px;
+    width:120px;
+}
+/*下边*/
+.xiabian{
+    height:155px;
+    width:1200px;
+    bottom:-7px;
+    position: absolute;
+    background: linear-gradient(#a1a1a1, #676767,#a1a1a1);
+    font-size:14px;
+    display:none;
+}
+.kuangjia{
+    height:100%;
+    width:200px;
+    float:left;
+
+}
+.kuangjia_1{
+    height:100%;
+    width:100px;
+    float:left;
+}
+.wenzi{
+    font-size:14px;
+    color:#ffffff;
+
+    margin-left:20px;
+}
+.shi{
+    margin-top:14px;}
+
+.ershi{
+    margin-top:22px;}
+.shiba{
+    margin-top:18px;
+}
+
+ .wenzi span{
+     color: #9ecd00;
+ }
+ .kuangjia_1 span{
+     margin-top:20px;
+     width:30px;
+     height:28px;
+ }
+
+ .kai{
+
+     width:30px;
+     height:23px;
+     background-color: white;
+     color:#000000;
+     float:left;
+     text-align:center;
+     line-height:23px;
+ }
+ .guan{
+
+     width:30px;
+     height:23px;
+     background-color:#9b9b9b;
+     color:#ffffff;
+     float:left;
+     text-align:center;
+     line-height: 23px
+ }
+
+ .shezhi{
+     margin-top:85px;
+ }
+
+ .shezhi1{
+    margin-top:36px;
+    margin-left:13px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
