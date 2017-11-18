@@ -19,6 +19,9 @@
             $("#hide").hover(function(){
                 $("#aaa").show();
             });
+            function goto() {
+                location.href = "/index.php/home/eqpt/index";
+            }
             map = new SuperMap.Map ("map",{controls:[
                /* new SuperMap.Control.ScaleLine(),
                 new SuperMap.Control.PanZoomBar({showSlider:true}),
@@ -290,6 +293,7 @@
                 vectorInfoWin.destroy();
             }
         }*/
+
     </script>
     <style>
         .selec{
@@ -324,59 +328,15 @@
 <div class="main border">
     <!--主区-->
     <div class="content">
-        <div id="map" class="contentView border shadow">
+        <div class="switchViewBtn">
+            <a href="javascript:goto()"><img src="/Public/home/images/run/playback2.png" alt="视频"><br>回放</a>
+            <a href="javascript:goto()"><img src="/Public/home/images/run/video.png" alt="视频"><br>预览</a>
+            <a href="javascript:goto()"><img src="/Public/home/images/run/fire.png" alt="防火" style="width: 20px; padding-bottom: 3px;"><br>防火分区</a>
+            <a href="javascript:goto()"><img src="/Public/home/images/run/gis.png" alt="GIS"><br>GIS</a>
+            <a href="javascript:goto()"><img src="/Public/home/images/run/view.png" alt="视图"><br>三视图</a>
+
         </div>
-        <!--视图切换按钮-->
-        <!--<div class="contentView">-->
-
-          <!--  <div class="viewLeft border shadow">
-                &lt;!&ndash;视频区开始&ndash;&gt;
-                <div class="viewLeftVideo">
-                    <object classid="clsid:146FF3A3-49EA-4AAC-B4BD-3E181394265F" id="obj" height= '578px' width="770px" >
-                    </object>
-                    <div id="objLink" class="objLink">请点击下载插件,安装时请关闭浏览器</div>
-                </div>
-
-                &lt;!&ndash;监控点切换&ndash;&gt;
-                <div class="viewLeftCtl">
-                    <form action="">
-                        <select name="street" class="street" style="width:206px;height:22px">
-                            <option value="ying">迎旭路</option>
-                            <option value="yuan">园博园大街</option>
-                            <option value="tai">太行大街</option>
-                            <option value="xin">新城大街</option>
-                            <option value="long">隆兴路</option>
-                        </select>
-                        <br>
-                        <select  id="point" name="point" style="width:206px;height:22px" onchange="show_sub(this.options[this.options.selectedIndex].value)">
-                            <option value="大华">大华</option>
-                            <option value="海康">海康</option>
-                        </select>
-                        &lt;!&ndash;<input type="button" id="record" value="录像">&ndash;&gt;
-                    </form>
-                </div>
-                <div class="viewRightCtl">
-                    <img src="/Public/home/images/run/u69.png">
-                    <button id="recordBtn">录像</button>
-                    <button id="findDevBtn">发现设备</button>
-                </div>
-                &lt;!&ndash;视频区结束&ndash;&gt;
-            </div>-->
-
-           <!-- <div class="viewLeft">-->
-                <!--GIS区域开始-->
-                <!--<div class="viewRitGis border shadow">
-                    <iframe src="/index.php/home/run/gisSmall" frameborder="0" width='100%' height="100%" scrolling="no"></iframe>
-                </div>-->
-
-                <!--GIS区域结束-->
-
-                <!--防火分区开始-->
-               <!-- <div class="viewRitFirePro border shadow">
-                    <img src="/Public/home/images/run/u74.png">
-                </div>-->
-                <!--防火分区结束-->
-           <!-- </div>-->
+        <div id="map" class="contentView border shadow"></div>
         <div class="youkuangjia" id="aaa">
             <div class="youkuangjia_1">
                 <h2 id="kuangjiaName">园博园大街</h2>

@@ -399,14 +399,17 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .nav{
+            position: relative;
+            z-index: 9999;
+        }
     </style>
 </head>
 
 <body style="overflow-x: scroll" onLoad="onPageLoad()">
+
 <div class="webpage">
     <div class="main border">
-
-
         <!--主区-->
         <div class="content">
             <!--三维-->
@@ -417,19 +420,19 @@
             </div>
             <!--三维视角标签-->
             <div class="modLab">
-                <a id="jia" href="javascript:visualChange(4)" class="biaoqian">
+                <a id="jia" href="javascript:visualChange(4)" >
                     <img src="/Public/home/images/run/夹层1.png" alt=""/><p>夹层</p>
                     <iframe src="" frameborder="0"></iframe>
                 </a>
-                <a id="shui" href="javascript:visualChange(3)" class="biaoqian">
+                <a id="shui" href="javascript:visualChange(3)" >
                     <img src="/Public/home/images/run/水仓1.png" alt=""/><p>水仓</p>
                     <iframe src="" frameborder="0"></iframe>
                 </a>
-                <a id="dian" href="javascript:visualChange(2)" class="biaoqian">
+                <a id="dian" href="javascript:visualChange(2)">
                     <img src="/Public/home/images/run/电仓1.png" alt=""/><p>电仓</p>
                     <iframe src="" frameborder="0"></iframe>
                 </a>
-                <a id="guan" href="javascript:visualChange(1)" class="biaoqian">
+                <a id="guan" href="javascript:visualChange(1)" >
                     <img src="/Public/home/images/run/管廊1.png" alt="" /><p>管廊</p>
                     <iframe src="" frameborder="0"></iframe>
 

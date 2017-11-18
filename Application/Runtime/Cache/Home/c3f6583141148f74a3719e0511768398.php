@@ -201,7 +201,6 @@
                     UR.css("display","block");
                 }
             })
-
         })
     </script>
     <style>
@@ -258,63 +257,46 @@
             background-color: #FFFFFF;
             display: none;
         }
+        /*二级菜单*/
+         .selec{
+             background-image: url('/Public/home/images/setting/MenuGray.png');
+             background-repeat: no-repeat;
+             line-height:35px;
+             width:150px;
+             font-size:13px;
+             height:35px;
+             float:right;
+             position:relative;
+         }
+        .unselec{
+            background-image: url('/Public/home/images/setting/MenuWhite.png');
+            background-repeat: no-repeat;
+            line-height:35px;
+            width:150px;
+            font-size:13px;
+            height:35px;
+            float:right;
+            position:relative;
+        }
     </style>
 </head>
 <body>
+<div class="webpage">
 <div class="main border">
-    <!--导航条开始-->
-    <div class="navBar shadow">
-        <div class="navLeft">
-            <div>
-                <img src="/Public/home/images/run/u142.png" alt="logo" style="width:30px;height:30px;padding-top: 10px;float: left">
-                <div class="title">智慧管廊综合管理平台</div>
-            </div>
-        </div>
-        <div class="nav">
-            <ul>
-                <li><a href="/index.php/home/run/index">系统运行</a></li>
-                <li><a href="/index.php/home/Eqpt/index.html">系统设备</a></li>
-                <li><a href="#">档案管理</a></li>
-                <li><a href="#">报警信息</a></li>
-                <li>
-                    <a href="#" >巡查巡检</a>
-                    <ul class="navBar_two">
-                        <li style="clear: both;"><a href="#">安防系统</a></li>
-                        <li style="clear: both;"><a href="#">消防系统</a></li>
-                        <li style="clear: both;"><a href="#">自控系统</a></li>
-                        <li style="clear: both;"><a href="#">配电与照明</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">入廊企业</a> </li>
-                <li><a href="#">人员管理</a> </li>
-                <li><a href="#">应急指挥</a> </li>
-                <li><a href="#">3D漫游</a> </li>
-                <li><a href="#">教育培训</a> </li>
-            </ul>
-        </div>
-
-        <div class="navRight ">
-            <img src="/Public/home/images/run/u144.png" alt="" style="margin-left:5px;position: relative">
-            &nbsp;你好！Admin</div>
-
-        <div class="setting"><a href="/index.php/home/Setting/setting" >
-            <img src="/Public/home/images/run/u148.png" alt="" >
-        </a></div>
-
-    </div>
-    <!--导航条结束-->
-
     <!--主区-->
     <div class="content">
         <!--视图切换按钮-->
         <div class="switchViewBtn">
-            <a href="/index.php/home/run/playback"><img src="/Public/home/images/run/playback2.png" alt="视频"><br>回放</a>
-            <a href="/index.php/home/run/video"><img src="/Public/home/images/run/video.png" alt="视频"><br>预览</a>
-            <a href="/index.php/home/Eqpt/index.html"><img src="/Public/home/images/run/fire.png" alt="防火" style="width: 20px; padding-bottom: 3px;"><br>防火分区</a>
-            <a href="/index.php/home/run/map"><img src="/Public/home/images/run/gis.png" alt="GIS"><br>GIS</a>
-            <a href="/index.php/home/run/run"><img src="/Public/home/images/run/view.png" alt="视图"><br>三视图</a>
+            <a href="/index.php/home/run/playback"><div class="unselec"  style="top:19px;left:28px;">
+                <span style="margin-left:-12px;color:#000000;">历史回放</span></div></a>
+            <a href="/index.php/home/run/video"><div class="selec" style="top:19px;left:59px;">
+                <span style="margin-left:-12px; color:#000000;">视频界面</span></div></a>
+            <a href="/index.php/home/Eqpt/index.html"><div class="unselec" style="top:19px;left:90px;">
+                <span style="margin-left:-12px;color:#000000;">BIM</span></div></a>
+            <a href="/index.php/home/run/index.html"><div class="unselec" style="top:19px;left:121px;">
+                <span style="margin-left:-12px;color:#000000;">GIS</span></div></a>
         </div>
-
+        <div class="webpa">
         <div class="xiala"><p>下</br>拉</br>框</p></div>
         <div class="ditu"><p>地</br></br>图</p></div>
 
@@ -325,31 +307,40 @@
             <div class="shipin_1"></div>
             <div class="shipin_1"></div>
 
-            <img src="/Public/home/images/run/高.png" alt="" style="width:25px;height:25px;"id="img0">
+            <div class="tubiao3" style="margin-left:10px;"><img src="/Public/home/images/run/高.png" alt="" style="width:25px;height:25px;"id="img0">
+                <p style="left:8px;">宽高比</p>
+            </div>
             <div class="button0">
                 <span>4:3</span>
                 <span>16:9</span>
                 <span>x1</span>
             </div>
-            <p style="left:8px;">宽高比</p>
-            <img src="/Public/home/images/run/清晰.png" alt="" style="width:25px;height:25px;"id="img1">
+
+            <div class="tubiao3"><img src="/Public/home/images/run/清晰.png" alt="" style="width:25px;height:25px;"id="img1">
+                <p style="left:48px;">清晰度</p>
+            </div>
             <div class="button1">
                 <span>普通</span>
                 <span>流畅</span>
                 <span>高清</span>
             </div>
-            <p style="left:48px;">清晰度</p>
-            <img src="/Public/home/images/run/视频.png" alt="" style="width:25px;height:25px;"id="img2">
+
+            <div class="tubiao3"><img src="/Public/home/images/run/视频.png" alt="" style="width:25px;height:25px;"id="img2">
+                <p style="left:88px;">分界面</p>
+            </div>
             <div class="button2">
                 <img src="/Public/home/images/run/kuang.png" alt="" >
                 <img src="/Public/home/images/run/kuang1.png" alt="">
                 <img src="/Public/home/images/run/kuang2.png" alt="">
             </div>
-            <p style="left:88px;">分界面</p>
-            <img src="/Public/home/images/run/流畅.png" alt="" style="width:25px;height:25px;" id="img4">
-            <p style="left:135px;">全屏</p>
-            <img src="/Public/home/images/run/清晰度.png" alt="" style="width:25px;height:25px;"id="img3">
 
+            <div class="tubiao3"><img src="/Public/home/images/run/流畅.png" alt="" style="width:25px;height:25px;" id="img4">
+                <p style="left:135px;">全屏</p>
+            </div>
+
+            <div class="tubiao3"><img src="/Public/home/images/run/清晰度.png" alt="" style="width:25px;height:25px;"id="img3">
+                <p style="left:175px;">色彩</p>
+            </div>
             <div class="button3">
                 <img src="/Public/home/images/run/01.png" alt=""
                      style="margin-top:3px;margin-left:10px;">
@@ -364,7 +355,7 @@
                      style="margin-left:102px;margin-top:28px;">
                 <div class="zhu" style="top:36px;left:130px;"><div class="zhu_1"></div></div>
             </div>
-            <p style="left:175px;">色彩</p>
+
             <div class="button4">
                 <img src="/Public/home/images/run/you1.png" alt="" style="width:25px;height:25px;margin-right: 18px;">
 
@@ -375,7 +366,6 @@
                 <img src="/Public/home/images/run/you4.png" alt="" style="width:25px;height:25px;">
 
                 <img src="/Public/home/images/run/you5.png" alt="" style="width:25px;height:25px;">
-
             </div>
             <div style="right:19px;" class="tishi1">警报</div>
             <div style="right:65px;" class="tishi1">抓拍</div>
@@ -472,7 +462,7 @@
                     <img src="/Public/home/images/run/异性8.png" alt="" class="sanjiao7_1" >
                 </div>
                 <div class="jiajian">
-                    <div class="jian" sy><h1>-</h1></div>
+                    <div class="jian" ><h1>-</h1></div>
                     <div class="di"><div class="mian"></div></div>
 
                     <div class="jia"><h1>+</h1></div>
@@ -503,8 +493,8 @@
                     <option >精准定位</option>
                     <option >水平旋转</option>
                     </select>
-                    <button>开&nbsp;始</button>
-                    <button>结&nbsp;束</button>
+                    <div>开&nbsp;始</div>
+                    <div>结&nbsp;束</div>
                 </div>
             </div>
 
@@ -512,8 +502,9 @@
             <div class="tuceng3_2">辅码流</div>
 
         </div>
-
+        </div>
     </div>
+</div>
             <!--搜索视频云台
             <div class="contentView">
 -->

@@ -1,23 +1,55 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="en">
 <head>
+    <link rel="stylesheet" href="__PUBLIC__/home/css/navigation.css">
     <meta charset="utf-8" />
     <title>运行管理</title>
-    <style>
-        #iframeHeader{
-            width: 100%;
-            height: 100px;
-        }
-        #iframeContent{
-            width: 100%;
-            height: 800px;
-        }
-    </style>
 <body>
-<div id="index">
-    <iframe id="iframeHeader" name="iframeTop" frameborder="0" scrolling="no" src="__CONTROLLER__/header"></iframe>
-    <iframe id="iframeContent" name="iframeContent" scrolling="no" frameborder="0" src="__MODULE__/run/index"></iframe>
+<div class="navBar shadow" style="z-index: 9999;position: relative">
+    <div class="navLeft">
+        <div>
+            <img src="__PUBLIC__/home/images/run/u142.png" alt="logo" style="width:30px;height:25px;padding-top:9px; margin-left:5px;float:left">
+            <div class="title">智慧管廊综合管理平台</div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <foreach name="authinfoA" item="v">
+                <li>
+                    <if condition="$v.auth_c eq '#'"><a href="#">{$v.auth_name}</a>
+                        <else/><a href="__MODULE__/{$v.auth_c}/{$v.auth_a}" target="contentFrame">{$v.auth_name}</a>
+                    </if>
+                    <ul>
+                        <foreach name="authinfoB" item="vv">
+                            <eq name="vv.auth_pid" value="$v.auth_id">
+                                <li>
+                                    <a href="__MODULE__/{$vv.auth_c}/{$vv.auth_a}">
+                                        {$vv.auth_name}
+                                        <iframe src="" frameborder="0"></iframe>
+                                    </a>
+                                </li>
+                            </eq>
+                        </foreach>
+                    </ul>
+                </li>
+            </foreach>
+        </ul>
+    </div>
+    <div class="navRight ">
+        <img src="__PUBLIC__/home/images/run/u144.png" alt="" style="margin-left:5px;position: relative">&nbsp;你好！{$Think.session.admin_name}
+    </div>
+    <div class="setting">
+        <a href="__MODULE__/setting/setting" target="iframeContent" >
+            <img src="__PUBLIC__/home/images/run/u148.png" alt="" >
+        </a>
+    </div>
+    <div class="logout">
+        <a href="__MODULE__/User/logout"  target="_parent">
+            退出
+        </a>
+    </div>
 </div>
+<!--导航条结束-->
+        <iframe height="900" width="100%" border="0" frameborder="0" src="{:U('run/index')}" name="contentFrame" id="contentFrame" title="contentFrame"></iframe>
 </body>
 </html>
