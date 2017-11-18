@@ -26,19 +26,24 @@ class UserController extends Controller{
                     $info = $user
                         ->where(array('user_name'=>$shuju['user_name'],'password'=>$shuju['password']))
                         ->find();
-                    if($info !== null){
-                        //持久化用户信息
-                        session('admin_id',$info['user_id']);
-                        session('admin_name',$info['user_name']);
-                        //session('admin_role',$info['role_id']); //持久化角色信息
-                        //跳转到后台首页面
-                        //redirect($url,$params=array(),$delay=0,$msg='')
-                        $this -> redirect('index/index');
-                        //$this -> success('登陆成功！',U('index/index'),1);
-                    }else{
-                        //$this->redirect('login', array(), 2,'用户名或密码错误，请重新登录~');
-                        $this -> error('用户名或密码错误，请重新登录~',U('login'),1);
-                    }
+                        if($info !== null){
+                            //校验用户是否被锁定
+                            if($info["islock"]){
+                            //持久化用户信息
+                            session('admin_id',$info['user_id']);
+                            session('admin_name',$info['user_name']);
+                            session('admin_role',$info['role_id']); //持久化角色信息
+                            //跳转到后台首页面
+                            //redirect($url,$params=array(),$delay=0,$msg='')
+                            $this -> redirect('index/index');
+                            //$this -> success('登陆成功！',U('index/index'),1);
+                            }else{
+                                $this -> error('用户处于锁定状态，请联系管理员~',U('login'),10);
+                            }
+                        }else{
+                            //$this->redirect('login', array(), 2,'用户名或密码错误，请重新登录~');
+                            $this -> error('用户名或密码错误，请重新登录~',U('login'),1);
+                        }
 
                 }else{
                    // $this->redirect('login', array(), 2,'验证码错误，请重新登录~');
